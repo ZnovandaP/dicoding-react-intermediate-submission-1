@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border
+}
+
+[data-placeholder]:empty:before{
+  content: attr(data-placeholder);
+  @apply text-2xl text-stone-100/40 font-bold 
+}
+
+
+@layer components {
+  .active-nav::after {
+    @apply content-[''] block w-full h-2 absolute -bottom-2 bg-gradient-to-r from-green-500 via-green-500/40 to-white/10 -rotate-[4deg] origin-[0]
+  }
+}
+
+@layer utilities {
+  .center{
+    @apply flex items-center justify-center
+  }
+}
