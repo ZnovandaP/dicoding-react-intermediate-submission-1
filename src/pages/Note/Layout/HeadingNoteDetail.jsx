@@ -39,7 +39,9 @@ HeadingNoteDetail.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string,
     archived: PropTypes.bool,
-    createdAt: PropTypes.string,
+    createdAt: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.instanceOf(Date)]),
   }).isRequired,
 };
 
